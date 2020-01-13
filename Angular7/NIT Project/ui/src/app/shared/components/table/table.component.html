@@ -1,0 +1,21 @@
+<div class="container-fluid">
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+
+            <th *ngIf="hasImage">Image</th>
+            <th *ngFor="let h of headers">{{h}}</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <tr *ngFor="let dObj of data">
+            <td *ngIf="hasImage"><img width="100px" src="{{imgBasePath +dObj._id+'.jpg?'+timeStamp}}" ></td>
+            <td *ngFor='let k of keys'>{{dObj[k]}}</td>
+            <td><input type='button' value="edit" (click)="fnEdit(dObj)" class="btn btn-primary" /></td>
+            <td><input type='button' value="delete" (click)="fnDelete(dObj)" class="btn btn-primary" /></td>
+        </tr>
+    </table>
+</div>
+  <app-pagination [totalPages]='totalPages' (fnSendOpt)="fnGetOpt($event)" [currPage]="currPage"></app-pagination>
+</div>

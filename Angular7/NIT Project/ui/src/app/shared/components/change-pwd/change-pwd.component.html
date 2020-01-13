@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <h3 class="text-center m-b50 m-t25">Change Password</h3>
+    
+    <div class="row form-group">
+          <div class="col-sm-5 text-right">
+              <b>Current Password:</b>
+          </div>
+          <div class="col-sm-3">
+              <input class="form-control" [(ngModel)]='dataObj.cpwd' />
+          </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>New Password:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="password" [(ngModel)]='dataObj.npwd' />
+        </div>
+    </div>
+    <div class="row form-group">
+       
+        <div class="offset-sm-5 col-sm-7">
+            <input type='button' value="Change pwd" (click)="fnChangePwd()" class="btn btn-primary" />
+        </div>
+    </div>
+    </div>
+    
+    <app-loader *ngIf="isShowLoader"></app-loader>

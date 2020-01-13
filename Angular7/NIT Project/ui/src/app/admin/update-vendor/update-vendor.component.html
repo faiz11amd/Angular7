@@ -1,0 +1,48 @@
+
+<div class="container-fluid">
+    <h1 class="text-center m-t50 m-b50">Update Vendor</h1>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Uid:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" [(ngModel)]='dataObj.uid' />
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Password:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="password" [(ngModel)]='dataObj.pwd' />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Email:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" [(ngModel)]='dataObj.email' />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Phone:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" [(ngModel)]='dataObj.phone' />
+        </div>
+    </div>
+    <div class="row form-group">
+    
+        <div class="offset-sm-5 col-sm-7">
+            <input type='button' value="Update" (click)="fnUpdate()" class="btn btn-primary" />
+            <input type='button' value="cancel" (click)="fnCancel()" class="btn btn-primary" />
+           
+        </div>
+    </div>
+    </div>
+    
+    <app-loader *ngIf="isShowLoader"></app-loader>

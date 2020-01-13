@@ -1,0 +1,25 @@
+<div class='container-fluid'>
+    <h1 class="text-center">My Profile</h1>
+    <h3 class="text-center">Name: {{custObj.uid}}</h3>
+    <h3 class="text-center">Phone: {{custObj.phone}}</h3>
+    <h3 class="text-center">Email: {{custObj.email}}</h3>
+    <h1 class="text-center">Address</h1>
+    <div><a class="cursor-pointer" (click)="fnAddAddress()">Add New Address</a></div>
+
+
+    <div class="row form-group" *ngFor="let add of addressArr;let index=index">
+        <div class="col-sm-3 text-right">
+            <b> Address {{index+1}}.</b>
+        </div>
+        <div class="col-sm-3">
+            <textarea class="form-control" [(ngModel)]="addressObj['add'+(index+1)]"></textarea>
+        </div>
+    </div>
+    <div class="row form-group" *ngIf="addressArr.length > 0">
+       
+        <div class="offset-sm-3 col-sm-3">
+            <input type='button' value='add Address' (click)='fnSubmit()' class="btn btn-primary" />
+        </div>
+    </div>
+ 
+</div>

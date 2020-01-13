@@ -1,0 +1,19 @@
+<mat-card class="example-card m-b50">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{dataObj.name}}</mat-card-title>
+      <mat-card-subtitle>{{dataObj.cost}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="dataObj._id" src="{{imageBaseUrl+dataObj._id+'.jpg?'+timeStamp}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+         {{dataObj.desc}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="btn btn-primary product-btns" mat-button (click)="fnAddToCustomer('buy-now')">BuY Now</button>
+      <button class="btn btn-primary product-btns" mat-button (click)="fnAddToCustomer('add-to-cart')">Add To Cart</button>
+    </mat-card-actions>
+  </mat-card>
+
+<app-loader *ngIf="isShowLoader"></app-loader>

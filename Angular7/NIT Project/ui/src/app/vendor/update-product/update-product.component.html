@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <h1 class="text-center m-t50 m-b50">Product Updation</h1>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Name:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" [(ngModel)]='dataObj.name' />
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Cost:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="number" [(ngModel)]='dataObj.cost' />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Description:</b>
+        </div>
+        <div class="col-sm-3">
+            <textarea class="form-control" [(ngModel)]='dataObj.desc'></textarea>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Image:</b>
+        </div>
+        <div class="col-sm-3">
+            <input  type="file" #file ng2FileSelect [uploader]="uploader"  />
+        </div>
+        <div class="col-sm-3">
+            <img width="100px" height="100px" src="{{imageBaseUrl+dataObj._id+'.jpg?'+timeStamp}}" />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="offset-sm-5 col-sm-7">
+            <input type='button' value="Update" (click)="fnUpdate()" class="btn btn-primary" />
+            <input type='button' value="Cancel" (click)="fnCancel()" class="btn btn-primary" />
+            
+        </div>
+    </div>
+    </div>
+    
+    <app-loader *ngIf="isShowLoader"></app-loader>

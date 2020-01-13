@@ -1,0 +1,46 @@
+
+
+
+Step-1> Make a local repository on your system
+	>mkdir test1
+	>cd test1
+
+Step-2> We need a remote cloud repo of any verson control system(github,svn)
+	Angular7
+
+Step-3> Local repo we need to initiate as a git repo by using 
+	>git init
+
+Step-4> We need to configure our git repo by giving verson control system credentials
+	>git config user.name "faiz11amd"
+	>git config user.email "faiz11amd@gmail.com"
+
+Step-5> Now we need to connect our local repo to remote repo by using 
+	>git remote add "https://github.com/faiz11amd/Angular7"
+
+Step-6> Now we add our file to staging area(ready to commit)
+	>git add file_name.extention (add file to staging area)
+
+Step-7> Commit your changes with some message in local repo
+	>git commit -m "message"
+
+Step-8> we can push our files from local repo to remote repo
+	>git push origin branch_name or >git push -f origin branch_name (-f for force push)
+
+	>enter your username:faiz11amd
+	>enter your password:F@iz11061992
+	
+
+>git branch (list all the branch of repo)
+>git branch branch_name (create new branch)
+>git checkout branch_name (switch current branch to mention branch_name)
+
+>git log (show log of your all works)
+>git status (shows which changes have been staged, which haven't, and which files aren't being tracked by Git)
+>git stash (temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on)
+
+> git rm -r file_name (deleted from local)
+> git commit -m "message"
+> git push origin master (changes refelected in remote)
+
+

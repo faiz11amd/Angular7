@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class='row'>
+         
+        <div class="col-sm-3 products-list" *ngFor="let pObj of products">
+            <mat-card class="example-card" (click)="fnProductClick(pObj._id)">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{pObj.name}}</mat-card-title>
+                  <mat-card-subtitle>{{pObj.cost}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{imageBaseUrl+pObj._id+'.jpg?'+timeStamp}}" alt="Photo of a Shiba Inu">
+               
+              </mat-card>
+        </div>
+    </div>
+</div>
+
+<app-loader *ngIf="isShowLoader"></app-loader>
