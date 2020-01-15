@@ -30,7 +30,7 @@ Step-6> Now we add our file to staging area(ready to commit)
 -- If file is deleted from cli which is present in remote also
 	>git rm -r filename/directoryname  (-r is for recursivly)
 	>git commit -m "deletedfile"
-	>git push origin master   ( -f is overwrite the remote history with local history )
+	>git push origin master   ( -f is collapes the remote history with local history / means deleted all files from remote and add all new file from local repo )
 
 Step-7> Commit your changes with some message in local repo
 	>git commit -m "message"
