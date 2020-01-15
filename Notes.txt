@@ -43,18 +43,23 @@ Step-9> we can push our files from local repo to remote repo
 
 	>enter your username:faiz11amd
 	>enter your password:F@iz11061992
-	
 
+Storing Login Details:
+>git config --global credential.helper store  (storing login credential)
+>git config --global credential.helper cache
+>git config --global credential.helper 'cache --timeout=600' (timeout session)	
+
+Create and Delete Branch:
 >git branch (list all the branch of repo)
 >git branch branch_name (create local new branch)
 >git checkout branch_name (switch current branch to mention branch_name)
-
->git push origin --delete branchName  (to delete remote branch)
 >git branch -d branchName (to delete local branch)
+>git push origin --delete branchName  (to delete remote branch)
 
 >git log (show log of your all works)
 >git status (shows which changes have been staged, which haven't, and which files aren't being tracked by Git)
 >git stash (temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on)
+>git clean -i (to clean working tree)
 
 > git rm -r file_name (deleted from local)
 > git commit -m "message"
