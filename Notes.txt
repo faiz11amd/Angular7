@@ -1,5 +1,6 @@
 
-
+						Git Commands
+						============
 
 Step-1> Make a local repository on your system
 	>mkdir test1
