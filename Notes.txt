@@ -17,6 +17,10 @@ Step-4> We need to configure our git repo by giving verson control system creden
 
 Step-5> Now we need to connect our local repo to remote repo by using - "origin" is just a name u can use another also.
 	>git remote add origin "https://github.com/faiz11amd/Angular7"
+-- If we want to remove remote url
+	>git remote remove/rm <remoteName>
+-- list all remote url
+	>git remote -v
 
 Step-6> Now we add our file to staging area(ready to commit)
 	>git add file_name.extention (add file to staging area)
