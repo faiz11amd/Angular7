@@ -1,0 +1,15 @@
+<h1 class='text-center m-b50 m-t25'>Vendors</h1>
+<app-table
+   #tableData
+   *ngIf="hasVendors"
+   [headers]="headers"
+   [data] ="data"
+   [totalData]="totalData"
+   [perPage]="perPage"
+   [keys] ="keys"
+  (fnGetEditInfo)="fnGetEditInfo($event)"
+  (fnGetDeleteInfo)= "fnGetDeleteInfo($event)"
+
+></app-table>
+<app-loader *ngIf="isShowLoader"></app-loader>
+<h3 *ngIf="!hasVendors" class='text-center'>No Vendors found</h3>

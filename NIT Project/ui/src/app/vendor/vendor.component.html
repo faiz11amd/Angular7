@@ -1,0 +1,11 @@
+<b class="loggedin-user">{{name}}</b>
+<button (click)="fnMobileMenuBtnClick()" class="mobile-menu-btn d-md-none"><span></span><span></span><span></span></button>   
+
+<div class="menu" id="menu" (click)="fnMenuClick()">
+    <a routerLink="home" routerLinkActive="menu-active">Home</a>
+    <a routerLink="create-product" routerLinkActive="menu-active">Create Product</a>
+    <a routerLink="products-list" routerLinkActive="menu-active">Products</a>
+    <a routerLink="cpwd" routerLinkActive="menu-active">Change Password</a>
+    <a (click)="fnLogout()">Logout</a>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-12 col-sm-3 ">
+        <input [(ngModel)]="goto" />
+        <input type='button' value='go'  (click)="fnOpt('g')" />
+    </div>
+    <div class="col-12 col-sm-6 text-center">
+        <input type='button' value='pre' (click)="fnOpt('p')" [disabled]="currPage==1" />
+         {{currPage}}
+        <input type='button' value='next'[disabled]="currPage==totalPages" (click)="fnOpt('n')"/>
+
+    </div>
+    <div class="col-12 col-sm-3 text-right">
+        <b>Total Pages: {{totalPages}}</b>
+    </div>
+</div>

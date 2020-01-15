@@ -1,0 +1,23 @@
+<mat-card *ngFor="let pObj of products">
+    <div class="row">
+        <div class='col-sm-4'>
+           <img  src="{{imageBaseUrl+pObj._id+'.jpg?'+timeStamp}}"/>
+        </div>
+        <div class="col-sm-5">
+            <p>
+                 {{pObj.name}}
+            </p>
+            <p>
+                {{pObj.cost}}
+            </p>
+            <p>
+                {{pObj.desc}}
+            </p>
+        </div>
+        <div class='col-sm-3' *ngIf="isShowBtns">
+                <button class="btn btn-primary product-btns" mat-button (click)="fnBuyNow(pObj)">BuY Now</button>
+                <button class="btn btn-primary product-btns" mat-button (click)="fnRemoveFromCart(pObj)">Remove</button>
+           
+        </div>
+    </div>
+</mat-card>

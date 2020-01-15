@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <h1 class="text-center m-t50 m-b50">Product Creation</h1>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Name:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" [(ngModel)]='dataObj.name' />
+        </div>
+    </div>
+    
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Cost:</b>
+        </div>
+        <div class="col-sm-3">
+            <input class="form-control" type="number" [(ngModel)]='dataObj.cost' />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Description:</b>
+        </div>
+        <div class="col-sm-3">
+            <textarea class="form-control" [(ngModel)]='dataObj.desc'></textarea>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col-sm-5 text-right">
+            <b>Image:</b>
+        </div>
+        <div class="col-sm-3">
+            <input #file  type="file" ng2FileSelect [uploader]="uploader"  />
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="offset-sm-5 col-sm-7">
+            <input type='button' value="Submit" (click)="fnSubmit()" class="btn btn-primary" />
+        </div>
+    </div>
+    </div>
+
+    
+    <app-loader *ngIf="isShowLoader"></app-loader>

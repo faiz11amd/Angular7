@@ -1,0 +1,30 @@
+<div class="container-fluid">
+<h3 class="text-center m-b50 m-t25">Login</h3>
+
+<div class="row form-group">
+      <div class="col-sm-5 text-right">
+          <b>Uid:</b>
+      </div>
+      <div class="col-sm-3">
+          <input class="form-control" [(ngModel)]='dataObj.uid' />
+      </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-sm-5 text-right">
+        <b>Password:</b>
+    </div>
+    <div class="col-sm-3">
+        <input class="form-control" type="password" [(ngModel)]='dataObj.pwd' />
+    </div>
+</div>
+<div class="row form-group">
+   
+    <div class="offset-sm-5 col-sm-7">
+        <input type='button' value="Login" (click)="fnLogin()" class="btn btn-primary" />
+        <a href="/register">to Register</a>
+    </div>
+</div>
+</div>
+
+<app-loader *ngIf="isShowLoader"></app-loader>

@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+
+.m-b25{
+    margin-bottom: 25px;
+}
+
+.m-b50{
+    margin-bottom: 50px;
+}
+.m-b75{
+    margin-bottom: 75px;
+}
+
+
+.m-t25{
+    margin-top: 25px;
+}
+
+.m-t50{
+    margin-top: 50px;
+}
+.m-t75{
+    margin-top: 75px;
+}
+
+.menu-active{
+    color: red;
+    border-bottom: 2px solid red;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.menu{
+    text-align: right;
+    line-height: 40px;
+    background: burlywood;
+}
+
+.menu > a{
+    margin-right: 15px;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+}
+.products-list .mat-card-image{
+    height: 280px !important;
+}
+
+.mobile-menu-btn > span{
+    width: 30px;
+    border: 1px solid red;
+    display: block;
+    margin: 5px 0px;
+}
+.loggedin-user{
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    color: white
+}
+.mobile-menu{
+    top: 107px;
+    position: absolute;
+    z-index: 999999;
+    border: 1px solid blue;
+    border-radius: 5px;
+    left: -210px;
+    transition: left 2s;
+    width: 200px;
+    padding: 10px;
+}
+.show-mobile-menu{
+    left: 0;
+}
+.mobile-menu > a{
+    display: block;
+    text-align: left;
+    margin: 10px 0px;
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mat-card{
+    margin:10px !important;
+}
+.product-btns{
+    width: 100px;
+    margin: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

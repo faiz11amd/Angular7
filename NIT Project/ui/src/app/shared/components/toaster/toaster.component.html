@@ -1,0 +1,4 @@
+<div class="toaster" [ngStyle]="bgObj" [ngClass]="{'show-toaster':isShowToaster,'hide-toaster':!isShowToaster}">
+    {{msg}}
+    <span (click)="fnCloseToaster()">X</span>
+</div>

@@ -1,0 +1,17 @@
+
+<h1 class='text-center m-b50 m-t25'>Products</h1>
+<app-table
+   #tableData
+   *ngIf="hasProducts"
+   [headers]="headers"
+   [data] ="data"
+   [totalData]="totalData"
+   [perPage]="perPage"
+   [keys] ="keys"
+   [hasImage]="true"
+  (fnGetEditInfo)="fnGetEditInfo($event)"
+  (fnGetDeleteInfo)= "fnGetDeleteInfo($event)"
+
+></app-table>
+<app-loader *ngIf="isShowLoader"></app-loader>
+<h3 *ngIf="!hasProducts" class='text-center'>No Products found</h3>

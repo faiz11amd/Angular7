@@ -1,0 +1,34 @@
+<b class="loggedin-user">{{name}}</b>
+<div class='cust-menu'>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+                <mat-icon>home</mat-icon>
+                <a routerLink="home" routerLinkActive="menu-active">Home</a>
+              </button>
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <a routerLink="orders" routerLinkActive="menu-active">Orders</a>
+    </button>
+    <button mat-menu-item >
+      <mat-icon>shopping_cart</mat-icon>
+      <a routerLink="cart" routerLinkActive="menu-active">Cart</a>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>book</mat-icon>
+      <a routerLink="cpwd" routerLinkActive="menu-active">ChangePwd</a>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>book</mat-icon>
+      <a routerLink="profile" routerLinkActive="menu-active">Profile</a>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <a (click)="fnLogout()">Logout</a>
+    </button>
+  </mat-menu>
+</div>
+
+<router-outlet></router-outlet>
