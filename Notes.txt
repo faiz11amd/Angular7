@@ -50,7 +50,7 @@ Step-9> we can push our files from local repo to remote repo
 >git checkout branch_name (switch current branch to mention branch_name)
 
 >git push origin --delete branchName  (to delete remote branch)
->git baranch -d branchName (to delete local branch)
+>git branch -d branchName (to delete local branch)
 
 >git log (show log of your all works)
 >git status (shows which changes have been staged, which haven't, and which files aren't being tracked by Git)
