@@ -25,6 +25,12 @@ Step-5> Now we need to connect our local repo to remote repo by using - "origin"
 
 Step-6> Now we add our file to staging area(ready to commit)
 	>git add file_name.extention (add file to staging area)
+-- If file is delete from local via gui which is present in remote also
+	>git add .   ( . means current directory)  -- stages all the changes include deleted file also
+-- If file is deleted from cli which is present in remote also
+	>git rm -r filename/directoryname  (-r is for recursivly)
+	>git commit -m "deletedfile"
+	>git push origin master   ( -f is overwrite the remote history with local history )
 
 Step-7> Commit your changes with some message in local repo
 	>git commit -m "message"
