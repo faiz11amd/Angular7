@@ -15,8 +15,8 @@ Step-4> We need to configure our git repo by giving verson control system creden
 	>git config user.name "faiz11amd"
 	>git config user.email "faiz11amd@gmail.com"
 
-Step-5> Now we need to connect our local repo to remote repo by using 
-	>git remote add "https://github.com/faiz11amd/Angular7"
+Step-5> Now we need to connect our local repo to remote repo by using - "origin" is just a name u can use another also.
+	>git remote add origin "https://github.com/faiz11amd/Angular7"
 
 Step-6> Now we add our file to staging area(ready to commit)
 	>git add file_name.extention (add file to staging area)
@@ -24,7 +24,10 @@ Step-6> Now we add our file to staging area(ready to commit)
 Step-7> Commit your changes with some message in local repo
 	>git commit -m "message"
 
-Step-8> we can push our files from local repo to remote repo
+Step-8> If fatal: refusing to merge unrelated histories or local and remote file are not matched
+	>git pull origin master --allow-unrelated-histories
+
+Step-9> we can push our files from local repo to remote repo
 	>git push origin branch_name or >git push -f origin branch_name (-f for force push)
 
 	>enter your username:faiz11amd
